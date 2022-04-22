@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作台</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="../day01/scss1/index.css">
+
+</head>
+
+<body>
+    <!-- 顶部位置 -->
+    <div class="top_box">
+        <div>
+            <h3> <span class="glyphicon glyphicon-menu-left" aria-hidden="true" style="font-size: 18px;"></span> 工作台
+            </h3>
+            <span>
+                <span class="glyphicon glyphicon2 glyphicon-search" aria-hidden="true" onclick="ss()"></span>
+                <span class="glyphicon glyphicon2 glyphicon-cog" aria-hidden="true" onclick="sz()"></span>
+            </span>
+        </div>
+    </div>
+
+    <!-- 轮播图 -->
+    <div class="lbt">
+        <img src="" alt="">
+    </div>
+
+    <div class="card">
+        <header>
+            <span>日常流程</span>
+            <span class="glyphicon show1 glyphicon-menu-down" aria-hidden="true"></span>
+        </header>
+        <div class="conter">
+            <!-- 加班流程 -->
+            <div>
+                <span class="glyphicon glyphicon1 glyphicon-star" aria-hidden="true"></span>
+                <span class="span2">加班流程</span>
+            </div>
+            <!-- 请假流程 -->
+            <div>
+                <span class="glyphicon glyphicon1 glyphicon-heart" aria-hidden="true"></span>
+                <span class="span2">请假流程</span>
+            </div>
+            <!-- 补卡申请 -->
+            <div>
+                <span class="glyphicon glyphicon1 glyphicon-folder-close" aria-hidden="true"></span>
+                <span class="span2">补卡申请</span>
+            </div>
+            <!-- 外出申请 -->
+            <div>
+                <span class="glyphicon glyphicon1 glyphicon-log-out" aria-hidden="true"></span>
+                <span class="span2">外出申请</span>
+            </div>
+            <!-- 出差申请 -->
+            <div>
+                <span class="glyphicon glyphicon1 glyphicon-phone-alt" aria-hidden="true"></span>
+                <span class="span2">出差申请</span>
+            </div>
+            <!-- 考勤打卡 -->
+            <div>
+                <span class="glyphicon glyphicon1 glyphicon-equalizer" aria-hidden="true"></span>
+                <span class="span2">考勤打卡</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <header>
+            <span>文档流程</span>
+            <span class="glyphicon show2 glyphicon-menu-down" aria-hidden="true"></span>
+        </header>
+        <div class="conter wendang">
+            <!-- 文档 -->
+            <div>
+                <span class="glyphicon glyphicon1 glyphicon-star" aria-hidden="true"></span>
+                <span class="span2">文档</span>
+            </div>
+            <!-- 我的日记 -->
+            <div>
+                <span class="glyphicon glyphicon1 glyphicon-tasks" aria-hidden="true"></span>
+                <span class="span2">我的日记</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 底部栏 -->
+    <div class="bottom_box">
+        <!-- 消息 -->
+        <div class="tab_ber">
+            <span class="span1 tabspan glyphicon glyphicon-bell" aria-hidden="true"></span>
+            <span>消息</span>
+        </div>
+        <!-- 通讯录 -->
+        <div class="tab_ber">
+            <span class="span1 tabspan glyphicon glyphicon-phone" aria-hidden="true"></span>
+            <span>通讯录</span>
+        </div>
+        <!-- 工作台 -->
+        <div class="tab_ber">
+            <span class="span1 tabspan glyphicon glyphicon-wrench" aria-hidden="true"></span>
+            <span>工作台</span>
+        </div>
+        <!-- 我的 -->
+        <div class="tab_ber">
+            <span class="span1 tabspan glyphicon glyphicon-user" aria-hidden="true"></span>
+            <span>我的</span>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var glyphicon1 = document.querySelectorAll('.glyphicon1')
+    var conter1 = document.querySelector('.conter')
+    var conter2 = document.querySelector('.wendang')
+    var show1 = document.querySelector('.show1')
+    var show2 = document.querySelector('.show2')
+
+    glyphicon1.forEach(item => {
+        item.onclick = function () {
+            alert('实现对应操作')
+            // return false
+        }
+    })
+    let flag1 = 1
+    show1.onclick = function () {
+        if (flag1 == 1) {
+            conter1.style.cssText = 'display:none;'
+            console.log(show1.className);
+            show1.className = 'glyphicon show1 glyphicon-menu-right'
+
+            flag1 = 2
+        } else {
+            conter1.style.cssText = 'display:flex;'
+            show1.className = 'glyphicon show1 glyphicon-menu-down'
+            flag1 = 1
+        }
+    }
+    let flag2 = 1
+    show2.onclick = function () {
+        if (flag2 == 1) {
+            conter2.style.cssText = 'display:none;'
+            console.log(show1.className);
+            show2.className = 'glyphicon show1 glyphicon-menu-right'
+
+            flag2 = 2
+        } else {
+            conter2.style.cssText = 'display:flex;'
+            show2.className = 'glyphicon show1 glyphicon-menu-down'
+            flag2 = 1
+        }
+    }
+
+    function ss() {
+        alert('进行搜索操作')
+    }
+    function sz() {
+        alert('进行设置操作')
+    }
+
+
+
+</script>

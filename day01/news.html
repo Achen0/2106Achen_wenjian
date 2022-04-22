@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>移动端页面</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="../day01/scss/index.css">
+
+</head>
+
+<body>
+    <!-- 顶部位置 -->
+    <div class="top_box">
+        <div>
+            <h3>消息</h3>
+            <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+        </div>
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="sousuo">
+        <input class="sousuo_input" type="text" placeholder="请输入您要搜索的内容">
+    </div>
+
+    <!-- 消息条内容 -->
+    <div class="news_s">
+        <img src="../imgs/lindang.png" alt="">
+        <div class="news_conter">
+            <span class="span1">日报提交提醒</span>
+            <br>
+            <span class="span2">您今天的日报还未来得及提交，请及时提交</span>
+        </div>
+        <p class="riqi">
+            17:59
+        </p>
+    </div>
+    <!-- 消息条内容 -->
+    <div class="news_s">
+        <img src="../imgs/lindang.png" alt="">
+        <div class="news_conter">
+            <span class="span1">日报提交提醒</span>
+            <br>
+            <span class="span2">您今天的日报还未来得及提交，请及时提交</span>
+        </div>
+        <p class="riqi">
+            17:59
+        </p>
+    </div>
+    <!-- 消息条内容 -->
+    <div class="news_s">
+        <img src="../imgs/qian.png" alt="">
+        <div class="news_conter">
+            <span class="span1">日报提交提醒</span>
+            <br>
+            <span class="span2">您今天的日报还未来得及提交，请及时提交</span>
+        </div>
+        <p class="riqi">
+            17:59
+        </p>
+    </div>
+    <!-- 消息条内容 -->
+    <div class="news_s">
+        <img src="../imgs/xiuli.png" alt="">
+        <div class="news_conter">
+            <span class="span1">日报提交提醒</span>
+            <br>
+            <span class="span2">您今天的日报还未来得及提交，请及时提交</span>
+        </div>
+        <p class="riqi">
+            17:59
+        </p>
+    </div>
+
+    <div class="bottom_box">
+        <!-- 消息 -->
+        <div class="tab_ber">
+            <span class="span1 tabspan glyphicon glyphicon-bell" aria-hidden="true"></span>
+            <span>消息</span>
+        </div>
+        <!-- 通讯录 -->
+        <div class="tab_ber">
+            <span class="span1 tabspan glyphicon glyphicon-phone" aria-hidden="true"></span>
+            <span>通讯录</span>
+        </div>
+        <!-- 工作台 -->
+        <div class="tab_ber" onclick="gzt()">
+            <span class="span1 tabspan glyphicon glyphicon-wrench" aria-hidden="true"></span>
+            <span>工作台</span>
+        </div>
+        <!-- 我的 -->
+        <div class="tab_ber">
+            <span class="span1 tabspan glyphicon glyphicon-user" aria-hidden="true"></span>
+            <span>我的</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var hf = document.querySelector('.glyphicon') //
+    var top_box = document.querySelector('.top_box')  //顶部消息栏
+    var tabspan = document.querySelectorAll('.tabspan')  //所有底部标签
+    var news_s = document.querySelector('.news_s')  //消息条内容
+
+    // 循环消息条内容
+    // for(var i = 1 ; i <= 6 ; i++){
+    //     // 循环消息条6条，等马晓斌研究完
+    // }
+
+    let flag = 1
+    hf.onclick = function () {
+        if (flag == 1) {
+            top_box.style.background = '#00c297'
+            tabspan.forEach(item => {
+                item.style.color = '#00c297'
+            });
+            flag = 2
+        } else if (flag == 2) {
+            top_box.style.background = '#dc5c5c'
+            tabspan.forEach(item => {
+                item.style.color = '#dc5c5c'
+            })
+            flag = 3
+        } else if (flag == 3) {
+            top_box.style.background = '#008fe0'
+            tabspan.forEach(item => {
+                item.style.color = '#008fe0'
+            })
+            flag = 4
+        } else {
+            top_box.style.background = '#6300bf'
+            tabspan.forEach(item => {
+                item.style.color = '#6300bf'
+            })
+            flag = 1
+        }
+    }
+
+    function gzt(){
+        location.href="../day01/workbench.html"
+    }
+</script>

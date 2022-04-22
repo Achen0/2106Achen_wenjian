@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择地区</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="../day03/scss/index.css">
+</head>
+
+<body>
+    <div class="box">
+        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+        <span class="biaoti">选择地区</span>
+    </div>
+
+    <div class="top">
+        <span style="margin-right: 20px;">当前定位城市</span>
+        <span class="top_conter" style="color: rgb(0, 119, 255);">
+            <span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
+            <span style="font-size: 16px;">北京</span>
+        </span>
+    </div>
+
+    <div class="foot_conter">
+        <p>热门地区</p>
+        <div class="rmdq">
+            <span>北京</span>
+            <span>上海</span>
+            <span>广州</span>
+            <span>深圳</span>
+            <span>青岛</span>
+            <span>苏州</span>
+            <span>重庆</span>
+            <span>成都</span>
+            <span>杭州</span>
+        </div>
+    </div>
+
+    <div class="dibu_conter">
+        <div class="ff">
+            <p>所有地区</p>
+            <p class="yinwen">J</p>
+        </div>
+        <div class="gunlun">
+            <li>地址信息1</li>
+            <li>地址信息2</li>
+            <li>地址信息3</li>
+            <li>地址信息4</li>
+            <li>地址信息5</li>
+            <li>地址信息6</li>
+            <li>地址信息7</li>
+            <li>地址信息8</li>
+            <li>地址信息9</li>
+            <li>地址信息0</li>
+            <li>地址信息-</li>
+            <li>地址信息1</li>
+            <li>地址信息231</li>
+            <li>地址信息432</li>
+            <li>地址信息5</li>
+        </div>
+    </div>
+
+
+    <div class="jd_shuzi">
+        <span>A</span>
+        <span>B</span>
+        <span>C</span>
+        <span>D</span>
+        <span>E</span>
+        <span>F</span>
+        <span>G</span>
+        <span>H</span>
+        <span>J</span>
+        <span>K</span>
+        <span>L</span>
+        <span>Q</span>
+        <span>W</span>
+        <span>N</span>
+        <span>J</span>
+        <span>K</span>
+        <span>W</span>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    var jd_shuzi = document.querySelector('.jd_shuzi')
+    var span_s = document.querySelectorAll('.jd_shuzi>span')
+
+    var yinwen = document.querySelector('.yinwen')
+
+    // console.log(span_s);span_s.stopPropagation()
+
+    span_s.forEach(item => {
+        item.addEventListener('click', function (e) {
+            // console.log(e.target);   当前点击的元素
+            span_s.forEach(item => {
+                item.style.background = ""
+                item.style.color = "#000000"
+            });
+            e.target.style.background = 'rgb(0, 110, 255)'
+            e.target.style.color = '#ffffff'
+            yinwen.innerHTML = e.target.innerHTML
+        })
+    })
+
+
+
+</script>

@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    // width: 100%;
+    background-color: #ffffff;
+}
+
+.box{
+    width: 100%;
+    header{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        background: white;
+        padding-left: 20px;
+        span{
+            font-size: 18px;
+        }
+    }
+    .img_box{
+        width: 100%;
+        padding: 20px 0;
+        background: white;
+        text-align: center;
+    }
+}
+
+.box1{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    padding-left: 20px;
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 40px;
+    p{
+        font-size: 22px;
+    }
+}
+
+.cell{
+    width: 100%;
+    padding: 10px 20px;
+    position: relative;
+    input{
+        outline: none;
+        width: 100%;
+        height: 40px;
+        border: 1px solid #c2c2c2;
+        border-radius: 10px;
+        margin: 8px 0;
+        padding-left: 60px;
+        
+    }
+    .dingw{
+        position: absolute;
+        top: 47px;
+        left: 34px;
+        font-size: 16px;
+    }
+}
+
+.yzm{
+    width: 100%;
+    padding: 10px 20px;
+    position: relative;
+    input{
+        outline: none;
+        width: 100%;
+        height: 40px;
+        border: 1px solid #c2c2c2;
+        border-radius: 10px;
+        margin: 8px 0;
+        padding-left: 20px;
+    }
+    .dingw{
+        position: absolute;
+        top: 46px;
+        right: 34px;
+        font-size: 16px;
+    }
+}
+
+.yinsi{
+    margin-left: 22px;
+}
+
+.login_anniu{
+    width: 90%;
+    margin: 20px auto;
+    button{
+        width: 100%;
+        height: 40px;
+        background: dodgerblue;
+        border-radius: 10px;
+        border: 1px solid #ededed;
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+    }
+    div{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
